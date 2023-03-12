@@ -1,0 +1,18 @@
+<style>
+    form {
+        text-align: center;
+    }
+</style>
+<form>
+  <label for="ref_num">Reference Number:</label>
+  <input type="text" id="ref_num" maxlength="14">
+  <button type="button" onclick="openBill()">Show Bill</button>
+</form>
+
+<script>
+  function openBill() {
+    var ref_num = document.getElementById("ref_num").value;
+    var url = "https://bill.pitc.com.pk/hescobill/general/" + ref_num;
+    window.open(url, "_blank");
+  }
+</script>
